@@ -2,10 +2,7 @@
 #tuseday ,#wednesday,#thursday,#monday,#friday,#sunday,#saturday{
 	display: none;
 }
-#monday{
-	float: left;
-	background-color: red;
-}
+
 #heading{
 
 }
