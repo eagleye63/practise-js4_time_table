@@ -9,6 +9,10 @@ var d = new Date();
 findday();
 //document.getElementById("todayday").innerHTML = alldays[d.getDay()];
 function findday() {
+if(d.getDay()==0) {
+var findtoday=document.getElementById('sunday').style.display="block";
+document.getElementById('sunbtn').style.background="#0000cc";
+}
 if(d.getDay()==1) {
 var findtoday=document.getElementById('monday').style.display="block";
 document.getElementById('monbtn').style.background="#0000cc";
@@ -29,6 +33,10 @@ document.getElementById('thursbtn').style.background="#0000cc";
 if(d.getDay()==5){
 var findtoday=document.getElementById('friday').style.display="block";
 document.getElementById('fribtn').style.background="#0000cc";
+}
+if(d.getDay()==6){
+var findtoday=document.getElementById('saturday').style.display="block";
+document.getElementById('saturbtn').style.background="#0000cc";
 }
 }
 
@@ -57,12 +65,24 @@ var monclick=document.getElementById('fribtn').addEventListener("click",()=>{
 	var findtodaybtn=document.getElementById('friday').style.display="block";
 	document.getElementById('friheading').innerHTML='Lecture of Friday';
   });
+var monclick=document.getElementById('sunbtn').addEventListener("click",()=>{
+	hideotherday();
+	var findtodaybtn=document.getElementById('sunday').style.display="block";
+	//document.getElementById('tuseheading').innerHTML='Lecture of Tuseday';
+  });
+var monclick=document.getElementById('saturbtn').addEventListener("click",()=>{
+	hideotherday();
+	var findtodaybtn=document.getElementById('saturday').style.display="block";
+	//document.getElementById('tuseheading').innerHTML='Lecture of Tuseday';
+  });
 function hideotherday(){
 	document.getElementById('monday').style.display="none";
 	document.getElementById('tuseday').style.display="none";
 	document.getElementById('wednesday').style.display="none";
 	document.getElementById('thursday').style.display="none";
 	document.getElementById('friday').style.display="none";
+	document.getElementById('sunday').style.display="none";
+	document.getElementById('saturday').style.display="none";
 
 }
 

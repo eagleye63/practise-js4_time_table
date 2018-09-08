@@ -1,3 +1,19 @@
-#tuseday ,#wednesday,#thursday,#monday,#friday{
+
+#tuseday ,#wednesday,#thursday,#monday,#friday,#sunday,#saturday{
 	display: none;
+}
+#monday{
+	float: left;
+	background-color: red;
+}
+#heading{
+
+}
+#jumbo{
+
+}
+.holiday{
+	text-align: center;
+	font-size: 60px;
+	color:  #ff0080;
 }
